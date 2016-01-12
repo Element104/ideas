@@ -1,6 +1,6 @@
 # Secure Desktop Spin
 
-Fedora Desktop spin for paranoid people. This Pad serves for gathering ideas/brainstorming. If you have an idea (even from the "almost sci-fi" category) write it down please.
+Fedora Desktop spin for paranoid people. This document serves for gathering ideas, i.e. brainstorming. If you have an idea (even from the "almost sci-fi" category) write it down please.
 
 ## What are the assumptions about users of the spin
 
@@ -24,7 +24,7 @@ Fedora Desktop spin for paranoid people. This Pad serves for gathering ideas/bra
 
 * Something should analyze logs for weird things and warnings. User should be notified about anything suspicious but not spammed by every failed ssh login (probably should learn what to show and when? Bayes FTW?
 
-* Run OpenSCAP scans? Probably shuld SCE rather than OVAL for creating non-retarded tests...
+* Run OpenSCAP scans? Probably should use the SCE engine rather than OVAL for creating useful tests.
 
 ### System Security
 
@@ -34,13 +34,13 @@ Fedora Desktop spin for paranoid people. This Pad serves for gathering ideas/bra
 
 ### Network Security
 
- * Firewall(d) is installed and configured by default? if using firewalld, provide own zones with better names, definitions and documentation (and maybe try to merge this upstream after they evolve to a good state)
+ * Firewall(d) is installed and configured by default? If using firewalld, provide own zones with better names, definitions and documentation (and maybe try to merge this upstream after they evolve to a good state)
    * we could also use firehol for high-level firewall policy definition, it's better -- intuitive syntax (IMHO)
 
  * NetworkManager
-   * don't do things automagically, even dhcp configuration -- should prevent hijaking traffic by rogue devices (USB network cards)
+   * don't do things automagically, even dhcp configuration -- should prevent (automated) hijaking traffic by rogue devices (USB network cards)
 
- * WiFi: look for targeted attacks (deauth, impersonation)? I have SW for this but it's not published yet...
+ * WiFi: look for targeted attacks (deauth, impersonation)?
 
  * WiFi: randomized HW address, no sending of known SSIDs
 
@@ -72,8 +72,7 @@ Fedora Desktop spin for paranoid people. This Pad serves for gathering ideas/bra
  
 ### SELinux
 
- * turned ON by default
+ * Enforcing mode by default
  * Confine the user
  * Remove unconfied_t
  * Make sure it's not that easy to disable SELinux? (i.e. remove setenforce etc, LOL) But make it possible for debugging (probably selinux=0 for kernel is good enough...)
-
