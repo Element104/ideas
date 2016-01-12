@@ -12,6 +12,7 @@ The defaults for users
    * multiuser (not single user)
  * pam namespaces
  * and what about rolekit, does it work?
+   * rolekit is supposed to set a system to provide roles like database server, filesystem server, web server ...
  * basically xguest on drugs
    * xguest created new stuff for each session
    * we want to keep the previous sessions
